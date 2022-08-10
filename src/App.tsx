@@ -6,7 +6,21 @@ import styles from './App.module.css';
 
 import './global.css';
 
-const posts = [
+interface postProps {
+  id: number;
+  author: {
+      avatarUrl: string;
+      name: string;
+      role: string;
+  };
+  content: {
+      type: "paragraph" | "link";
+      content: string;
+  }[];
+  publishedAt: Date;
+}
+
+const posts : postProps[] = [
   {
     id: 1,
     author: {
@@ -15,7 +29,7 @@ const posts = [
       role: 'Developer',
     },
     content: [
-      { type: 'pharagraph', content: 'Fala galeraa 👋' },
+      { type: 'paragraph', content: 'Fala galeraa 👋' },
       { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀', },
       { type: 'link', content: 'jane.design/doctorcare' },
     ],
@@ -29,7 +43,7 @@ const posts = [
       role: 'Developer',
     },
     content: [
-      { type: 'pharagraph', content: 'Fala galeraa 👋' },
+      { type: 'paragraph', content: 'Fala galeraa 👋' },
       { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀', },
       { type: 'link', content: 'jane.design/doctorcare' },
     ],
