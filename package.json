@@ -3,13 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://victorbrunof.github.io/01-fundamentos-reactjs-ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "preview": "vite preview"
   },
   "dependencies": {
     "date-fns": "^2.29.1",
